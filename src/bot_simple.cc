@@ -9,10 +9,6 @@ public:
     virtual void OnGameStart() final {
         std::cout << "Hello, World!" << std::endl;
     }
-
-    virtual void OnStep() final {
-        std::cout << Observation()->GetGameLoop() << std::endl;
-    }
 };
 
 int main(int argc, char* argv[]) {
@@ -26,7 +22,8 @@ int main(int argc, char* argv[]) {
     });
 
     coordinator.LaunchStarcraft();
-    coordinator.StartGame(sc2::kMapBelShirVestigeLE);
+	const char* kMapAbyssalReefLE = "Ladder2017Season3/AbyssalReefLE.SC2Map";
+    coordinator.StartGame(kMapAbyssalReefLE);
 
     while (coordinator.Update()) {
     }

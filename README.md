@@ -7,11 +7,11 @@ StarCraft II API bot.
 ### Windows
 
 ```bash
-git submodule update --init --recursive
-mkdir build
-cd build
-cmake ../
-start Basileuis.sln
+git clone --recursive https://github.com/herodrigues/basileus.git
+cd basileus
+mkdir build && cd build
+cmake ../ -G "Visual Studio 15 2017 Win64"
+start basileus.sln
 ```
 
 ### Linux
