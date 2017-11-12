@@ -8,8 +8,10 @@ StarCraft II API bot.
 
 ```bash
 git submodule update --init --recursive
-cd src
-cmake ..
+mkdir build
+cd build
+cmake ../
+start Basileuis.sln
 ```
 
 ### Linux
