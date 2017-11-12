@@ -1,9 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
-
-project(Basileus)
-
 # Basileus source files
-file(GLOB BASILEUS_SOURCES "*.cpp" "*.h")
+file(GLOB BOT_SOURCES "*.cpp" "*.h")
 
 include_directories(SYSTEM
     ${PROJECT_SOURCE_DIR}/s2client-api/include
@@ -14,8 +10,8 @@ include_directories(SYSTEM
 link_directories(${PROJECT_BINARY_DIR}/s2client-api/bin)
 
 # Create the executable.
-add_executable(${PROJECT_NAME} ${BASILEUS_SOURCES})
-target_link_libraries(${PROOJECT_NAME}
+add_executable(Basileus ${BOT_SOURCES})
+target_link_libraries(Basileus
     sc2api sc2lib sc2utils sc2protocol civetweb protobuf
 )
 

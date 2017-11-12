@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+project(Basileus)
+
 # Specify output directories.
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
 
