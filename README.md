@@ -40,5 +40,5 @@ $ mkdir build && cd build
 # Use 'cmake -DCMAKE_BUILD_TYPE=Debug ../' to display debug information
 $ cmake ../
 $ make
-$ ./bin/Basileus "<path-to-maps>/Ladder2017Season3/InterloperLE.SC2Map"
+$ ./bin/basileus "<path-to-maps>/Ladder2017Season3/InterloperLE.SC2Map"
 ```

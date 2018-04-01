@@ -17,6 +17,10 @@ add_executable(basileus ${BOT_SOURCES})
 set_target_properties(basileus PROPERTIES FOLDER src)
 target_link_libraries(basileus sc2api sc2lib sc2utils)
 
+if (APPLE)
+    target_link_libraries(basileus "-framework Carbon")
+endif ()
+
 # Linux specific.
 if (UNIX AND NOT APPLE)
 	target_link_libraries(basileus pthread dl)
