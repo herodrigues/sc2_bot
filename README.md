@@ -33,7 +33,7 @@ $ start basileus.sln
 ### Linux
 
 ```bash
-$ git clone --recursive https://github.com/alkurbatov/suvorov-bot.git
+$ git clone --recursive https://github.com/herodrigues/basileus.git
 $ cd basileus
 $ mkdir build && cd build
 
