@@ -25,7 +25,8 @@ Download an install:
 ```bash
 $ git clone --recursive https://github.com/herodrigues/basileus.git
 $ cd basileus
-$ mkdir build && cd build
+$ mkdir build 
+$ cd build
 $ cmake ../ -G "Visual Studio 15 2017 Win64"
 $ start basileus.sln
 ```
@@ -40,5 +41,5 @@ $ mkdir build && cd build
 # Use 'cmake -DCMAKE_BUILD_TYPE=Debug ../' to display debug information
 $ cmake ../
 $ make
-$ ./bin/basileus "<path-to-maps>/Ladder2017Season3/InterloperLE.SC2Map"
+$ ./bin/basileus "<path-to-sc2-executable>"
 ```

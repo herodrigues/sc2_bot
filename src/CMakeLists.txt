@@ -1,5 +1,6 @@
 # Basileus source files
-file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
+# file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
+file(GLOB BOT_SOURCES "bot_simple.cc")
 
 include_directories(SYSTEM 
 	${PROJECT_SOURCE_DIR}/s2client-api/include
@@ -15,7 +16,7 @@ add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 #bot_simple
 add_executable(basileus ${BOT_SOURCES})
 set_target_properties(basileus PROPERTIES FOLDER src)
-target_link_libraries(basileus sc2api sc2lib sc2utils)
+target_link_libraries(basileus sc2api sc2lib sc2utils sc2renderer)
 
 if (APPLE)
     target_link_libraries(basileus "-framework Carbon")
