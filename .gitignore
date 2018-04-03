@@ -298,3 +298,4 @@ compile_commands.json
 CTestTestfile.cmake
 
 build
+/.metadata/

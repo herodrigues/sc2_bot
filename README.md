@@ -41,5 +41,5 @@ $ mkdir build && cd build
 # Use 'cmake -DCMAKE_BUILD_TYPE=Debug ../' to display debug information
 $ cmake ../
 $ make
-$ ./bin/basileus "<path-to-sc2-executable>"
+$ ./bin/basileus -e <path-to-sc2-executable>
 ```
