@@ -12,16 +12,23 @@ link_directories(${PROJECT_BINARY_DIR}/s2client-api/bin)
 # Setup MSVC parallelized builds
 add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 
-#bot_simple
+# bot_simple
 add_executable(basileus ${BOT_SOURCES})
 set_target_properties(basileus PROPERTIES FOLDER src)
 target_link_libraries(basileus sc2api sc2lib sc2utils sc2renderer)
 
+# Boost
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS}) 
+    target_link_libraries(basileus ${Boost_LIBRARIES})
+endif()
+
+# OS X
 if (APPLE)
 	target_link_libraries(basileus "-framework Carbon")
 endif ()
 
-# Linux specific.
+# Linux
 if (UNIX AND NOT APPLE)
 	target_link_libraries(basileus pthread dl)
 endif ()

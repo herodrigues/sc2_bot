@@ -17,5 +17,11 @@ set(BUILD_API_EXAMPLES OFF CACHE INTERNAL "" FORCE)
 # Disable building of tests in the sc2api submodule.
 set(BUILD_API_TESTS OFF CACHE INTERNAL "" FORCE)
 
+# Add Boost library
+set(Boost_USE_STATIC_LIBS OFF) 
+set(Boost_USE_MULTITHREADED ON)  
+set(Boost_USE_STATIC_RUNTIME OFF) 
+find_package(Boost 1.67.0 COMPONENTS filesystem regex) 
+
 add_subdirectory("s2client-api")
 add_subdirectory("src")
