@@ -1,6 +1,10 @@
 # Basileus source files
 file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
 
+if (UNIX)
+	file(GLOB BOT_SOURCES "feature_layers.cc")
+endif ()
+
 include_directories(SYSTEM 
 	${PROJECT_SOURCE_DIR}/s2client-api/include
 	${PROJECT_SOURCE_DIR}/s2client-api/contrib/protobuf/src

@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "promptOnClose": false,
+    "options": {
+        "cwd": "${workspaceRoot}/build/unix"
+    },
+    "tasks": [
+        {
+            "label": "Configure, build and run",
+            "command": "cmake ../../; make; ./bin/basileus -e ~/StarCraftII/Versions/Base59877/SC2_x64",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
