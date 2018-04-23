@@ -1,9 +1,9 @@
-#include "sc2api/sc2_api.h"
-#include "sc2utils/sc2_manage_process.h"
+#include <sc2api/sc2_api.h>
+#include <sc2utils/sc2_manage_process.h>
 
 #include <iostream>
 
-#include "sc2renderer/sc2_renderer.h"
+#include <sc2renderer/sc2_renderer.h>
 
 const float kCameraWidth = 24.0f;
 const int kFeatureLayerSize = 80;
