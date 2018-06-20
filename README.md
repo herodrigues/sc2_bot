@@ -1,12 +1,13 @@
-# ```basileus```
+# ```sc2_bot```
 
-StarCraft II API bot.
+StarCraft II API template bot using SC2 Client API (C++). There is nothing implemented here, it's just a template project with the sc2client-api as dependecy using CMake.
 
 ## Requirements
 
+
 Download an install: 
 
-* [Ladder 2017 Season 3 map pack](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season3.zip)
+* StarCraft II ([Linux](https://github.com/Blizzard/s2client-proto#downloads), [Windows](https://www.battle.net/download/getInstallerForGame?os=win&locale=enUS&version=LIVE&gameProgram=STARCRAFT_2) or [Mac](https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=STARCRAFT_2)
 * [CMake](https://cmake.org/download/)
 
 #### Linux
@@ -23,23 +24,23 @@ Download an install:
 ### Windows
 
 ```bash
-$ git clone --recursive https://github.com/herodrigues/basileus.git
-$ cd basileus
+$ git clone --recursive https://github.com/herodrigues/sc2_bot.git
+$ cd sc2_bot
 $ mkdir build 
 $ cd build
 $ cmake ../ -G "Visual Studio 15 2017 Win64"
-$ start basileus.sln
+$ start sc2_bot.sln
 ```
 
 ### Linux
 
 ```bash
-$ git clone --recursive https://github.com/herodrigues/basileus.git
-$ cd basileus
+$ git clone --recursive https://github.com/herodrigues/sc2_bot.git
+$ cd sc2_bot
 $ mkdir build && cd build
 
 # Use 'cmake -DCMAKE_BUILD_TYPE=Debug ../' to display debug information
 $ cmake ../
 $ make
-$ ./bin/basileus -e <path-to-sc2-executable>
+$ ./bin/sc2_bot -e <path-to-sc2-executable>
 ```

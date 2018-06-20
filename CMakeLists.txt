@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.1)
+make_minimum_required(VERSION 3.1)
 
-project(basileus)
+project(sc2_bot)
 
 # Specify output directories.
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
@@ -18,10 +18,10 @@ set(BUILD_API_EXAMPLES OFF CACHE INTERNAL "" FORCE)
 set(BUILD_API_TESTS OFF CACHE INTERNAL "" FORCE)
 
 # Add Boost library
-set(Boost_USE_STATIC_LIBS OFF) 
-set(Boost_USE_MULTITHREADED ON)  
-set(Boost_USE_STATIC_RUNTIME OFF) 
-find_package(Boost 1.67.0 COMPONENTS filesystem regex) 
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost 1.67.0 COMPONENTS filesystem regex)
 
 add_subdirectory("s2client-api")
 add_subdirectory("src")

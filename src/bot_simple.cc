@@ -83,11 +83,10 @@ int main(int argc, char* argv[]) {
 		CreateComputer(Race::Zerg, sc2::Difficulty::Hard)
 		});
 
-	coordinator.SetRealtime(true);
+	coordinator.SetRealtime(false);
 	coordinator.LaunchStarcraft();
 	
 	const char* kMapCollectMineralsAndGas = "MiniGames/CollectMineralsAndGas.SC2Map";
-	// const char* kMapDefeatRoaches = "MiniGames/DefeatRoaches.SC2Map";
 	coordinator.StartGame(kMapCollectMineralsAndGas);
 		
 	while (coordinator.Update()) {
