@@ -1,12 +1,5 @@
 # Basileus source files
-# file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
-if (WIN32)
-	file(GLOB BOT_SOURCES "bot_simple.cc")
-endif()
-
-if (UNIX)
-	file(GLOB BOT_SOURCES "feature_layers.cc")
-endif ()
+file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
 
 include_directories(SYSTEM
 	${PROJECT_SOURCE_DIR}/s2client-api/include
