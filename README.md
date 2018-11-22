@@ -10,6 +10,7 @@ Download an install:
 * [CMake](https://cmake.org/download/)
 
 #### Linux
+
 * ```make``` library.
 
 #### OS X
@@ -31,7 +32,7 @@ $ cmake ../ -G "Visual Studio 15 2017 Win64"
 $ start sc2_bot.sln
 ```
 
-### Linux
+### Linux and OS X
 
 ```bash
 $ git clone --recursive https://github.com/herodrigues/sc2_bot.git
@@ -42,4 +43,14 @@ $ mkdir build && cd build
 $ cmake ../
 $ make
 $ ./bin/sc2_bot -e <path-to-sc2-executable>
+```
+
+## Updating s2client-api
+
+In order to have the latest commits, you'll need to regularly perform a recursive update on the s2client-api library.
+
+```bash
+git submodule update --init --recursive
+git submodule foreach --recursive git fetch
+git submodule foreach git merge origin master
 ```
