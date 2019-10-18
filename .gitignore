@@ -300,3 +300,4 @@ CTestTestfile.cmake
 unix/
 win/
 /.metadata/
+build/

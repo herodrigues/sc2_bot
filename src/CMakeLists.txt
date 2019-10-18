@@ -1,4 +1,4 @@
-# Basileus source files
+# Bot source files
 file(GLOB BOT_SOURCES "*.cc" ".cpp" "*.h")
 
 include_directories(SYSTEM
@@ -15,7 +15,7 @@ add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP>)
 # bot_simple
 add_executable(sc2_bot ${BOT_SOURCES})
 set_target_properties(sc2_bot PROPERTIES FOLDER src)
-target_link_libraries(sc2_bot sc2api sc2lib sc2utils sc2renderer)
+target_link_libraries(sc2_bot sc2api sc2lib sc2utils sc2renderer civetweb libprotobuf)
 
 # Boost
 if(Boost_FOUND)
